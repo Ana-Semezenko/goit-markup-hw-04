@@ -393,6 +393,8 @@ header {
 /*footer*/
 .basement {
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   padding-top: 60px;
   padding-bottom: 60px;
@@ -446,9 +448,6 @@ header {
 .basement .contacts:hover {
   color: var(--secondary-background-color);
 }
-.footer-links {
-  margin-right: 878px;
-}
 .heading-footer {
   margin-bottom: 20px;
 
@@ -461,22 +460,33 @@ header {
   text-transform: uppercase;
   line-height: 1.7;
 }
+.footer-list {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
 .link-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
-}
-.social-list-footer .social-link {
+
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  fill: white;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.social-list-footer:not(:last-child) {
+.link-footer:hover,
+.link-footer:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-item:not(:last-child) {
   margin-right: 10px;
 }
-.social-list-footer:hover,
-.social-list-footer:focus {
-  background-color: var(--accent-color);
-  border-radius: 50%;
+.sign-footer {
+  width: 22px;
+  height: 22px;
 }
 /*Portfolio*/
 
