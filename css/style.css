@@ -109,6 +109,7 @@ header {
 .menu-nav a:focus {
   color: var(--accent-color);
 }
+
 .menu-nav li {
   text-decoration-line: none;
 }
@@ -137,9 +138,6 @@ header {
 .contacts a:focus {
   color: var(--accent-color);
 }
-.contacts li + li {
-  margin-left: 50px;
-}
 .icon-envelope {
   margin-right: 10px;
   padding: 0px;
@@ -148,8 +146,19 @@ header {
   fill: var(--seconday-text-color);
   cursor: pointer;
 }
-.icon-envelope:hover,
-.icon-envelope:focus {
+
+.contacts li + li {
+  margin-left: 50px;
+}
+.contacts-smartphone,
+.contacts-envelope {
+  display: flex;
+  align-items: center;
+}
+.contacts-smartphone:hover .icon-smartphone,
+.contacts-smartphone:focus .icon-smartphone,
+.contacts-envelope:hover .icon-envelope,
+.contacts-envelope:focus .icon-envelope {
   fill: var(--accent-color);
 }
 .icon-smartphone {
@@ -160,15 +169,12 @@ header {
   fill: var(--seconday-text-color);
   cursor: pointer;
 }
-.icon-smartphone:hover,
-.icon-smartphone:focus {
-  fill: var(--accent-color);
-}
 /*main-section*/
 
 .main-section {
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
 
   background-color: var(--primaryy-text-color);
   text-align: center;
@@ -205,6 +211,7 @@ header {
 .button:hover,
 .button:focus {
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* features */
@@ -216,7 +223,6 @@ header {
 
 .features-list {
   display: flex;
-  flex-wrap: wrap;
 }
 .features-list li + li {
   margin-left: 30px;
@@ -243,6 +249,9 @@ header {
 }
 
 .icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -250,7 +259,8 @@ header {
   height: 120px;
 }
 .feature-picture {
-  margin: 25px 100px;
+  align-items: center;
+  justify-content: center;
   width: 70px;
   height: 70px;
 }
@@ -295,13 +305,21 @@ header {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+
+.team-box:hover,
+.team-box:focus {
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
 .social-media {
   display: flex;
   justify-content: center;
 }
 
 .social-link {
-  fill: var(--seconday-text-color);
+  fill: rgba(175, 177, 184, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,7 +388,7 @@ header {
   fill: #afb1b8;
   display: flex;
   justify-content: center;
-  padding: 16px 32px;
+  align-items: center;
 
   width: 172px;
   height: 92px;
@@ -390,15 +408,31 @@ header {
 .client-link:hover {
   border-color: var(--accent-color);
 }
+
 /*footer*/
 .basement {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.container-footer {
+  width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container-end {
+  display: flex;
+  flex-direction: column;
+}
+.container-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
 }
 .brandmark {
   display: block;
@@ -484,10 +518,6 @@ header {
 .footer-item:not(:last-child) {
   margin-right: 10px;
 }
-.sign-footer {
-  width: 22px;
-  height: 22px;
-}
 /*Portfolio*/
 
 .portfolio-heading {
@@ -525,6 +555,11 @@ header {
 .button-menu:hover {
   background-color: var(--accent-color);
   color: var(--primary-background-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .button-main {
@@ -596,4 +631,11 @@ header {
   border-left: solid 1px #eeeeee;
   border-right: solid 1px #eeeeee;
   border-bottom: solid 1px #eeeeee;
+}
+.models-item:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
